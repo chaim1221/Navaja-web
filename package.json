@@ -1,0 +1,15 @@
+{
+  "name": "Navaja-web",
+  "version": "0.0.1",
+  "description": "Navaja web page application that submits requests to the Navaja API",
+  "author": "Chaim Eliyah, Brian Ritchie",
+  "repository": "https://github.com/chaim1221/Navaja-web",
+  "license": "GPL-3.0",
+  "dependencies": {},
+  "devDependencies": {
+    "jasmine-core": "2.3.4",
+    "karma": "0.13.9",
+    "karma-jasmine": "0.3.6",
+    "karma-phantomjs-launcher": "0.2.1"
+  }
+}
