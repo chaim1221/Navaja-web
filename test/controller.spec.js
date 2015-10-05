@@ -10,7 +10,7 @@ describe('module: NavajaController', function () {
 
   describe('initially', function () {
     it('sets someCondition to true', function () { 
-      
+      expect(scope.someCondition).toBeTruthy();
     });
   });
 });
