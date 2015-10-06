@@ -16,13 +16,18 @@ describe('module: NavajaService', function () {
         httpBackend = $injector.get('$httpBackend');
         
         httpBackend
-            .expectPOST('localhost:8080/api/employer/profile', [])
-            .respond(200, { data: fakeEmployer });
+            .expectPOST('localhost:8080/api/employer/profile', fakeEmployer)
+            .respond(function (method, url, data, headers) {
+                return [ 200, fakeEmployer ];
+            });
         service = NavajaService;
     }));
     
     it('allows the creation of profiles', function () {
-        service.create(fakeEmployer);
+        service.create(fakeEmployer).then(function (result) {
+            expect(result.data).toEqual(fakeEmployer);
+        });
+        httpBackend.flush();
     });
 });
 

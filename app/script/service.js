@@ -1,6 +1,6 @@
 function NavajaService ($http) {
     this.create = function (employer) {
-        $http.post('localhost:8080/api/employer/profile', employer);
+        return $http.post('localhost:8080/api/employer/profile', employer);
     }
 }
 
