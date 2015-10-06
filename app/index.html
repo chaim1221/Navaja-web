@@ -4,9 +4,15 @@
     <title>
       Navaja Day Labor Page for Employers
     </title>
-    <script type="text/javascript" src="./../node-modules/angular/angular.js" async></script>
+    <script type="text/javascript" src="./../node-modules/angular/angular.js" defer></script>
+    <script type="text/javascript" src="./app/script/controller.js" defer></script>
   </head>
   <body>
+    <div ng-controller="NavajaController">
+      <div ng-show="someCondition">
+        <button ng-click="someFunction()">Execute</button>
+      </div>
+    </div>
   </body>
 </html>
 

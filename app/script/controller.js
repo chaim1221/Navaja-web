@@ -1,11 +1,8 @@
-
-var NavajaController = function ($scope) {
-    $scope.someCondition = true;
-    $scope.someFunction = function(foo) {
-       var bar = foo;
-       return foo + bar;
+function NavajaController ($scope, service) {
+    $scope.createEmployer = function(employer) {
+       service.create(employer);
     }
 }
 
-angular.module('navaja-web', [])
-  .controller('NavajaController', NavajaController);
+angular.module('navaja-web')
+    .controller('NavajaController', ['$scope', 'NavajaService', NavajaController]);
